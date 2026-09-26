@@ -61,5 +61,3 @@ pip install requests beautifulsoup4 tkcalendar
 * **State Management:** The app tracks notices by combining the *Notice Title* and *Date* into a unique ID, storing them in a local `seen_notices.json` file as an O(1) lookup dictionary.
 * **Smart Routing:** The `handle_url()` function checks if a link is an internal `.php` IMS link or an external link (like Google Drive). Internal links are routed through the Referer-spoofing background downloader, while external links open safely in your standard web browser.
 * **Concurrency:** Web scraping and file downloading are handed off to daemon `threading` workers, ensuring the Tkinter GUI remains buttery smooth and never reads as "Not Responding".
-
----
